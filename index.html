@@ -53,7 +53,7 @@ const cv=document.getElementById('c'),g=cv.getContext('2d'),$=id=>document.getEl
 let W,H,D=Math.min(devicePixelRatio||1,2),mode=0,running=false,dur=120,left=120,t0=0,last=0,level=0,sync=.2,quietT=0,total=0,mic=false,an,buf,sparks=[],flash=0,lastB=0;
 function size(){const r=cv.getBoundingClientRect();W=cv.width=r.width*D;H=cv.height=r.height*D}
 addEventListener('resize',size);size();
-const GA='G-E5D2HF7146';let gaOn=false;
+const GA='G-NKJ2FF452Z';let gaOn=false;
 function loadGA(){if(gaOn)return;gaOn=true;const x=document.createElement('script');x.async=true;x.src='https://www.googletagmanager.com/gtag/js?id='+GA;document.head.appendChild(x);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA)}
 function track(n,p){if(gaOn)gtag('event',n,Object.assign({tool:'kpop_focus_stage'},p||{}))}
 function consent(v){try{localStorage.setItem('ga',v)}catch(e){}$('cb').style.display='none';if(v=='yes')loadGA()}
